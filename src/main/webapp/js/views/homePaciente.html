@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SIGEVA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/poppins.css">
+<link rel="stylesheet" href="css/sigevaSanitario.css">
+
+<body>
+    <!-- Sidebar/menu -->
+    <nav>
+        <header>
+         <div class="topnav w3-red">
+        	<div class="logoinicial">
+        		<a> <img src="img/SIGEVA_LOGO_menu.png" style="width:80%"></a>
+        	</div>
+        	
+        	<div class= "avatar dropdown" style="float:right;">
+	             <button class="dropbtn w3-red"><img src="img/men.jpg" /></button>
+	             <div class="dropdown-content" >
+				    <a data-bind="click : logout">Cerrar sesion</a>
+				    
+  				</div>
+            </div>
+            
+            <div class="avatartexto">
+	            <h2 class="usuarioiniciado" data-bind= "html : nombre"></h2>
+	            <h5 class="usuarioiniciado" data-bind= "html : tipoUsuario"></h5>
+	        </div>
+         </div>
+         
+            
+            
+            
+        </header>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:15px">Close Menu</a>
+        
+              
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-indigo w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-indigo w3-margin-right" onclick="w3_open()">☰</a>
+        
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:100px;margin-right:100px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:20px" id="showcase">
+        
+       
+       
+        <h1 class="w3-jumbo" data-bind= "html : centroAsignado" style="text-align:center;" ><b></b></h1>
+        <h5 style="text-align:center;">Hora de inicio: <input type="time" data-bind="value : horaInicio" disabled></h5>
+        <h5 style="text-align:center;">Hora de fin: <input type="time" data-bind="value : horaFin" disabled></h5>
+        <h3 style="text-align:center;"><b>Hoy es <span  data-bind= "html : fecha"></span></b></h3>
+        <h3 style="text-align:center;"><b>TUS CITAS</b></h3>
+        
+		</div>
+		
+		<div style="text-align: center; margin-top:20px;" data-bind="visible : botonFecha()==1">
+				<h6 style="font-family: Verdana;" align="center">
+					Fecha Primera Dosis: <span data-bind="html : fechaPrimeraDosis"
+						style="font-family: Verdana;" align="center"></span>
+				</h6>
+				
+				<h6 style="font-family: Verdana;" align="center">
+					Fecha Segunda Dosis: <span data-bind="html : fechaSegundaDosis"
+						style="font-family: Verdana;" align="center"></span>
+				</h6>
+				
+				<h6 style="font-family: Verdana;" align="center">
+					Centro Asignado: <span data-bind="html : centroAsignado"
+						style="font-family: Verdana;" align="center"></span>
+				</h6>
+	    </div>
+	    
+	    <div data-bind="visible : tablaCita()==1" style="margin-top:20px">
+				<table class="w3-table-all w3-centered">
+					<tr class="w3-red">
+						<th>Paciente</th>
+						<th>Centro Asignado</th>
+						<th>Fecha Primera Dosis</th>
+						<th>Fecha Segunda Dosis</th>
+						<th>Eliminar</th>
+						<th>Modificar</th>
+					</tr>
+					<!-- ko foreach : citas -->
+					<tr>
+						<td data-bind="html : dniUsuario"></td>
+						<td data-bind="html : centroAsignado"></td>
+						<td data-bind="html : fechaPrimeraDosis"></td>
+						<td data-bind="html : fechaSegundaDosis"></td>
+						 
+						<td><img data-bind="click : eliminarCita" class="iconoImg" src="css/delete.png" style="width:10%"></td>
+						<td><img data-bind="click : modificarCita" class="iconoImg" src="css/modify.png" style="width:10%"></td>
+					</tr>
+					<!-- /ko -->
+				</table>
+			
+		</div>
+		<h3 style="text-align:center;">Usted tiene <b data-bind="html : dosisAdministradas" ></b> dosis administradas</h3>
+		<div style="margin-top: 30px;" data-bind="visible : botonCita()==1" class="botoncito">
+					<button chroming="callToAction" style="background-color: #f44336; border-radius: 4px; color: white;  font-size: 20px; " data-bind="click : solicitarCita" style="margin-top:3px;">Solicitar Cita</button>
+	</div>
+        <!-- End page content -->
+    </div>
+
+
+   
+
+</body>
+
+</html>

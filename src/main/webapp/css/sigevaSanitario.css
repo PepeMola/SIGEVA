@@ -1,0 +1,158 @@
+body, h1, h2, h3, h4, h5 {
+	font-family: "Poppins", sans-serif
+}
+
+body {
+	font-size: 16px;
+}
+
+.usuarioiniciado {
+	color: white
+}
+
+.w3-half img {
+	margin-bottom: -6px;
+	margin-top: 16px;
+	opacity: 0.8;
+	cursor: pointer
+}
+
+.w3-half img:hover {
+	opacity: 1
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropbtn {
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 0;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+.topnav {
+	overflow: hidden;
+}
+
+a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 21px;
+	display: block;
+	border: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+.logoinicial {
+	margin-top:10px;
+	float: left;
+	margin-left:10px;
+}
+
+.avatar {
+	float: right;
+	padding: 0.5em 0.3em;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.avatar img {
+	width: 70px;
+	border-radius: 30%;
+	overflow: hidden;
+	border: 3px solid #051397;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.avatar h2 {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+.avatartexto {
+	margin-top:10px;
+	float: right;
+}
+
+.center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+input[type=text], input[type=password], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+form {
+	padding: 80px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.scroll {
+	height: 450px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	background: #ff9d00;
+}

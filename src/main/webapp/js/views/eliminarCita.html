@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SIGEVA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/poppins.css">
+<link rel="stylesheet" href="css/sigevaSanitario.css">
+
+<body>
+	<!-- Sidebar/menu -->
+	<nav>
+		<header>
+			<div class="topnav w3-red">
+				<div class="logoinicial">
+					<a> <img src="img/SIGEVA_LOGO_menu.png" style="width: 80%"></a>
+				</div>
+
+				<div class="avatar dropdown" style="float: right;">
+					<button class="dropbtn w3-red">
+						<img src="img/men.jpg" />
+					</button>
+					<div class="dropdown-content">
+						<a data-bind="click : logout">Cerrar sesion</a>
+
+					</div>
+				</div>
+
+				<div class="avatartexto">
+					<h2 class="usuarioiniciado" data-bind="html : nombre"></h2>
+					<h5 class="usuarioiniciado" data-bind="html : tipoUsuario"></h5>
+				</div>
+			</div>
+
+
+
+
+		</header>
+		<a href="javascript:void(0)" onclick="w3_close()"
+			class="w3-button w3-hide-large w3-display-topleft"
+			style="width: 100%; font-size: 15px">Close Menu</a>
+
+
+	</nav>
+
+	<!-- Top menu on small screens -->
+	<header
+		class="w3-container w3-top w3-hide-large w3-indigo w3-xlarge w3-padding">
+		<a href="javascript:void(0)"
+			class="w3-button w3-indigo w3-margin-right" onclick="w3_open()">☰</a>
+
+	</header>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large" onclick="w3_close()"
+		style="cursor: pointer" title="close side menu" id="myOverlay"></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left: 100px; margin-right: 100px">
+
+		<!-- Header -->
+		<div class="w3-container" style="margin-top: 20px" id="showcase">
+
+
+			<h1 class="w3-jumbo" style="text-align: center;">
+				<b>Eliminar cita</b>
+			</h1>
+			<div style="text-align: center;">
+
+				<div  data-bind="visible : botonFecha1()==1">
+					<label>Fecha 1º Dosis</label> <input type="text"
+						data-bind="value : fechaPrimeraDosis" disabled>
+					<div style="margin-top: 20px">
+						<button chroming="callToAction"
+							style="background-color: #f44336; border-radius: 4px; color: white; font-size: 20px;"
+							data-bind="click : eliminarPrimeraCita" style="margin-top:3px;">Eliminar Primera
+							cita</button>
+					</div>
+				</div>
+				<div style="margin-top: 10px">
+					<label>Fecha 2º Dosis</label> <input type="text"
+						data-bind="value : fechaSegundaDosis" disabled>
+
+					<div style="margin-top: 20px">
+						<button chroming="callToAction"
+							style="background-color: #f44336; border-radius: 4px; color: white; font-size: 20px;"
+							data-bind="click : eliminarSegundaCita" style="margin-top:3px;">Eliminar Segunda
+							cita</button> 
+					</div>
+				</div>
+			</div>
+			<!-- End page content -->
+		</div>
+</body>
+
+</html>

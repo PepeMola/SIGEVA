@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.vacuna.vacuna.controller","l":"UsuarioController"}];updateSearchResults();

@@ -1,0 +1,135 @@
+body{
+    margin-top:10px;
+    background:#FAFAFA;
+}
+/*==================================================
+  Newsfeed Left Sidebar
+  ==================================================*/
+
+/*Profile Card CSS*/
+
+
+.profile-card{
+  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
+  background-size: cover;
+  width: 100%;
+  min-height: 60px;
+  border-radius: 4px;
+  padding: 10px 10px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.profile-card img.profile-photo{
+  border: 7px solid #fff;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: -30px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.title {
+    margin-top: 100px;
+    font-size: 60px;
+    line-height: 100px;
+    font-weight: bold;
+    height: 100px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.profile-card h5 a{
+  font-size: 15px;
+}
+
+.profile-card a{
+  font-size: 12px;
+}
+
+/*Newsfeed Links CSS*/
+
+ul.nav-news-feed{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 0 40px 0;
+  background:#fff;
+  margin-left:20px;
+  padding-top:20px;
+  border: solid black 2px;
+  border-radius: 20px;
+}
+
+ul.nav-news-feed li{
+  list-style: none;
+  display: block;
+  padding: 15px 0;
+    min-height: 30px;
+}
+
+.iconoImg{
+  max-block-size: 30px;
+  float:left;
+}
+
+ul.nav-news-feed li div{
+  position: relative;
+  margin-left: 30px;
+  }
+
+ul.nav-news-feed li div::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #f1f2f2;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+ul.nav-news-feed li a{color: #6d6e71;}
+
+ul.nav-news-feed li i{
+  font-size: 18px;
+  margin-right: 15px;
+  float: left;
+}
+
+ul.nav-news-feed i.icon1{color: #8dc63f;}
+
+ul.nav-news-feed i.icon2{color: #662d91;}
+
+ul.nav-news-feed i.icon3{color: #ee2a7b;}
+
+ul.nav-news-fee i.icon4{color: #f7941e;}
+
+ul.nav-news-fee i.con5{color: #1c75bc;}
+
+ul.nav-news-feed i.icon6{color: #9e1f63;}
+
+/*Table**/
+
+
+table{
+  margin-left: 410px;
+  border-collapse:collapse;
+}
+th,tr,td{
+	border:1px solid #000;
+	width:150px;
+	height:45px;
+	vertical-align:middle;
+	text-align:center;
+}
+th{
+	color:#fff;
+	background-color: #252525;
+}
+
+tr:nth-child(odd) td{
+	background-color:#eee;
+}

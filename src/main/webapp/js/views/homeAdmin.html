@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SIGEVA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/poppins.css">
+<link rel="stylesheet" href="css/sigeva.css">
+
+<body>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-indigo w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+        <header class="avatar dropdown">
+            <img src="img/men.jpg" />
+            <div>
+	            <h2 class="usuarioiniciado" data-bind= "html : nombre"></h2>
+	            <h4 class="usuarioiniciado" data-bind= "html : tipoUsuario"></h4>
+            </div>
+            
+            <div class= "cerrarSesion">
+	            	<button data-bind="click : logout" chroming="callToAction" style= "background-color: #6666ff; border-radius: 5px; color: white;  font-size: 18px; margin-top:8px;">Cerrar Sesion</button>   
+            </div> 
+        </header>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:15px">Close Menu</a>
+        <div class="w3-container">
+            <a data-bind="click : paginaInicio"> <img src="img/SIGEVA_LOGO_menu.png"></a>
+        </div>
+        <div class="w3-bar-block">
+            <!-- Usuarios -->
+            <button class="dropdown-btn w3-bar-item w3-button w3-hover-white">Usuarios
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a data-bind="click : crearUsuarios" class="w3-bar-item w3-button w3-hover-white">Crear Usuarios</a>
+                <a data-bind="click : gestionUsuarios" class="w3-bar-item w3-button w3-hover-white">Ver usuarios</a>
+            </div>
+            <!-- Centros -->
+            <button class="dropdown-btn w3-bar-item w3-button w3-hover-white">Centros
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a data-bind="click : crearCentros" class="w3-bar-item w3-button w3-hover-white">Crear Centro</a>
+                <a data-bind="click : gestionCentros" class="w3-bar-item w3-button w3-hover-white">Ver centros</a>
+            </div>
+        </div>        
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-indigo w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-indigo w3-margin-right" onclick="w3_open()">☰</a>
+        
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px; text-align:center;" id="showcase">
+       		
+            <h1 class="w3-jumbo"><b>Bienvenido</b></h1><b><h1 class="w3-jumbo" data-bind= "html : nombre"></h1></b>
+             <h1 class="w3-jumbo"><b>al sistema de gestión de vacunas</b></h1>
+             <h1 class="w3-jumbo"><b>SIGEVA</b></h1>
+             <h1 class="w3-xxxlarge w3-text-black" style="margin-top:80px;"><b>Hoy es <span  data-bind= "html : fecha"></span></b></h1>
+            
+            <div id="box">
+  				<div id="box-date"></div>
+  				<div id="box-time"></div>
+			</div>
+        </div>
+
+
+        <!-- End page content -->
+    </div>
+
+
+   
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 static">
+			<div class="profile-card">
+				<div">
+					<h1
+						style="color: #FFFFFF; position: center; float: left; margin-left: 30px; margin-right: 400px; margin-top: 5px;">SIGEVA</h1>
+					<img style="float: left;"
+						src="https://bootdey.com/img/Content/avatar/avatar1.png"
+						alt="user" class="profile-photo">
+					<h5>
+						<a href="#" style="float: left;" class="text-white">Usuario</a>
+					</h5>
+				</div>
+			</div>
+			
+			
+			<div style="text-align: center;" data-bind="visible : botonCita()==1">
+				<oj-button chroming="callToAction" class="oj-button-lg" data-bind="click : solicitarCita"
+					style="margin-left:150px;margin-top:70px;margin-left:400px;min-height: 200px;min-width: 300px;">Solicitar
+				Cita</oj-button>
+			</div>
+			
+			
+			<div style="text-align: center;"  data-bind="visible : botonFecha()==1">
+				<h6 style="font-family: Verdana;" align="center">
+							Fecha Primera Dosis: <span data-bind="html : fechaPrimeraDosis"
+								style="font-family: Verdana;" align="center"></span>
+				</h6>
+				<h6 style="font-family: Verdana;" align="center">
+							Fecha Segunda Dosis: <span data-bind="html : fechaSegundaDosis"
+								style="font-family: Verdana;" align="center"></span>
+				</h6>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>

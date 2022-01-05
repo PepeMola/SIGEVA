@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 static">
+			<div class="profile-card">
+					<h1
+						style="color: #FFFFFF; position: center; float: left; margin-left: 30px; margin-right: 400px; margin-top: 5px;">SIGEVA</h1>
+					<img style="float: left;"
+						src="https://bootdey.com/img/Content/avatar/avatar1.png"
+						alt="user" class="profile-photo">
+					<h5>
+						<a href="#" style="float: left;" class="text-white">Usuario</a>
+					</h5>
+			</div>
+			
+			
+				<div div style="text-align: center;">
+					<p style="font-weight: bold; margin: 10px 10px 10px;">Modificar usuario</p>
+					<input type="text" data-bind="value : nombre" placeholder="Nombre">&nbsp;&nbsp;
+					<input type="text" data-bind="value : email" placeholder="Email">&nbsp;&nbsp; 
+					<input type="text" data-bind="value : dni" placeholder="DNI">&nbsp;&nbsp;  
+               		<input type="password" data-bind="value:password" class="form-control" placeholder="Your Password" id="password">		
+					&nbsp;&nbsp; 
+					<select id = "menuCentros">
+					<!--  ko foreach : centroAsignado -->
+					<option data-bind="html : nombre"></option>
+					<!-- /ko -->
+					</select>
+					&nbsp;&nbsp; 
+						<input type="text" data-bind="value : dosisAdministradas" placeholder="Dosis administradas">&nbsp;&nbsp;
+						<input type="text" data-bind="value : localidad" placeholder="Localidad">&nbsp;&nbsp;
+						 <input type="text" data-bind="value : provincia" placeholder="Provincia">&nbsp;&nbsp;
+						<oj-button chroming="callToAction" class="oj-button-sm"
+							data-bind="click : modificarUsuario" style="margin-top:3px;">Modificar
+						Usuario</oj-button>
+				</div>				
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

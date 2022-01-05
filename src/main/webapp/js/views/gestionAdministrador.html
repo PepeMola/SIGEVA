@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 static">
+			<div class="profile-card">
+				<div">
+					<h1
+						style="color: #FFFFFF; position: center; float: left; margin-left: 30px; margin-right: 400px; margin-top: 5px;">SIGEVA</h1>
+					<img style="float: left;"
+						src="https://bootdey.com/img/Content/avatar/avatar1.png"
+						alt="user" class="profile-photo">
+					<h5>
+						<a href="#" style="float: left;" class="text-white">Administrador</a>
+					</h5>
+				</div>
+			</div>
+			
+			
+				<div div style="text-align: center;">
+					<p style="font-weight: bold; margin: 10px 10px 10px;">Añadir administrador</p><br>
+					<input type="text" data-bind="value : nombre" placeholder="Nombre">&nbsp;&nbsp;
+					<input type="text" data-bind="value : email" placeholder="Email">&nbsp;&nbsp;
+					 <input data-bind="value : password" type="password" placeholder="Password">&nbsp;&nbsp;
+					<input type="text"  id ="dniUsuario "data-bind="value : dni" name="dni"  placeholder="DNI" />&nbsp;&nbsp;
+					&nbsp;&nbsp;
+						<oj-button chroming="callToAction" class="oj-button-sm"
+							data-bind="click : add" style="margin-top:3px;">Guardar
+						Administrador</oj-button>
+				</div>
+				<br>
+				<table class="table table-striped table-bordered  mt-2 table-sm" style="margin: 0 auto;" border-spacing=10px>
+					<tr>
+						<th>Nombre</th>
+						<th>Email</th>
+						<th>Password</th>
+						<th>DNI</th>
+						<th>Modificar</th>
+					</tr>
+					<!-- ko foreach : administradores -->
+					<tr>
+						<td data-bind="html : nombre"></td>
+						<td data-bind="html : email"></td>
+						<td >********</td>
+						<td data-bind="html : dni"></td>
+						 
+						
+						<td><button data-bind="click : modificarAdministrador" class="oj-button-sm"><img class="iconoImg" src="css/modify.png"></button></td>
+					</tr>
+					<!-- /ko -->
+				</table>
+			
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

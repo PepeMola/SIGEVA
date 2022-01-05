@@ -1,0 +1,103 @@
+body, h1, h2, h3, h4, h5 {
+	font-family: "Poppins", sans-serif
+}
+
+body {
+	font-size: 16px;
+}
+
+.usuarioiniciado {
+	color: white
+}
+
+.w3-half img {
+	margin-bottom: -6px;
+	margin-top: 16px;
+	opacity: 0.8;
+	cursor: pointer
+}
+
+.w3-half img:hover {
+	opacity: 1
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+	padding-left: 8px;
+}
+
+.dropdown-container a {
+	font-size: 14px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+a, .dropdown-btn {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 21px;
+	display: block;
+	border: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+.avatar {
+	background: rgba(0, 0, 0, 0.1);
+	padding: 0.5em 0.3em;
+	text-align: center;
+}
+
+.avatar img {
+	width: 100px;
+	border-radius: 30%;
+	overflow: hidden;
+	border: 3px solid #051397;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.avatar h2 {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+input[type=text], input[type=password], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+form {
+	padding: 80px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.scroll {
+	height: 450px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	background: #ff9d00;
+}

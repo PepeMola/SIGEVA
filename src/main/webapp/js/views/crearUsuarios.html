@@ -1,0 +1,149 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/poppins.css">
+<link rel="stylesheet" href="css/sigeva.css">
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-indigo w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+        <header class="avatar">
+            <img src="img/men.jpg" />
+             <h2 class="usuarioiniciado" data-bind= "html : nombreUsuario"></h2>
+            <h4 class="usuarioiniciado" data-bind= "html : tipoUsuario"></h4>
+            <div class= "cerrarSesion">
+	            	<button data-bind="click : logout" chroming="callToAction" style= "background-color: #6666ff; border-radius: 5px; color: white;  font-size: 18px; margin-top:8px;">Cerrar Sesion</button>   
+            </div> 
+        </header>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:15px">Close Menu</a>
+        <div class="w3-container">
+            <a data-bind="click : paginaInicio"> <img src="img/SIGEVA_LOGO_menu.png"></a>
+        </div>
+        <div class="w3-bar-block">
+            <!-- Usuarios -->
+            <button class="dropdown-btn w3-bar-item w3-button w3-hover-white">Usuarios
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a data-bind="click : crearUsuarios" class="w3-bar-item w3-button w3-hover-white">Crear Usuarios</a>
+                <a data-bind="click : gestionUsuarios" class="w3-bar-item w3-button w3-hover-white">Ver usuarios</a>
+            </div>
+            <!-- Centros -->
+            <button class="dropdown-btn w3-bar-item w3-button w3-hover-white">Centros
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a data-bind="click : crearCentros" class="w3-bar-item w3-button w3-hover-white">Crear Centro</a>
+                <a data-bind="click : gestionCentros" class="w3-bar-item w3-button w3-hover-white">Ver centros</a>
+            </div>
+            
+        </div>        
+    </nav>
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Crear usuario</b></h1>
+
+            <form action="">
+                <label>Nombre</label>
+                <input type="text" data-bind="value : nombre" placeholder="Nombre">
+
+                <label>Email</label>
+                <input type="text" data-bind="value : email" placeholder="Email">
+
+                <label>Password</label>
+                <input data-bind="value : password" type="password" placeholder="Password">
+                
+                <label>Repite Contraseña</label>
+                <input data-bind="value : password2" type="password" placeholder="Password">
+
+                <label>DNI</label>
+                <input type="text" data-bind="value : dni" name="dni" placeholder="DNI">
+
+                <br>
+                <br>
+
+                <label>Tipo de usuario: </label>
+                <input id="tipoUsario" name="tipoUsuario" type="radio" value="Administrador" />Administrador
+                <input id="tipoUsuario" name="tipoUsuario" type="radio" value="Sanitario" />Sanitario
+                <input id="tipoUsuario" name="tipoUsuario" type="radio" value="Paciente" />Paciente
+
+                <br>
+                <br>
+
+
+                <label>Centro asignado</label>
+                <select id="menuCentros">
+                    <!--  ko foreach : centroAsignado -->
+                    <option data-bind="html : nombre"></option>
+                    <!-- /ko -->
+                </select>
+
+                <label>Localidad</label>
+                <input type="text" data-bind="value : localidad" placeholder="Localidad">
+
+                <label>Provincia</label>
+                <input type="text" data-bind="value : provincia" placeholder="Provincia">
+                <oj-button chroming="callToAction" class="oj-button-sm" data-bind="click : add" style="margin-top:3px;">
+                    Guardar
+                    Usuario</oj-button>
+            </form>
+        </div>
+        <!-- End page content -->
+    </div>
+
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
